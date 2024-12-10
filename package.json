@@ -1,0 +1,29 @@
+{
+  "name": "jewelrytracker_soloproject",
+  "version": "1.0.0",
+  "description": "\"A jewelry management app\"",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WizardE007/jewelryTracker_soloProject.git"
+  },
+  "keywords": [
+    "jewelry",
+    "inventory",
+    "tracker"
+  ],
+  "author": "Elijah Egede",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/WizardE007/jewelryTracker_soloProject/issues"
+  },
+  "homepage": "https://github.com/WizardE007/jewelryTracker_soloProject#readme",
+  "devDependencies": {
+    "webpack": "^5.97.1",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^5.1.0"
+  }
+}
