@@ -1,0 +1,1 @@
+# jewelryTracker_soloProject
