@@ -33,11 +33,29 @@ const App = () => {
 
 
   return (
-    <div>
-      <h1>Jewelry Tracker</h1>
-      <p>Welcome to the Jewelry Tracker App!</p>
-      <InventoryForm addItem={addItem} updateItem={updateItem} editingItem={editingItem} />
-      <InventoryList items={items} deleteItem={deleteItem} editItem={editItem} />
+    <div className="container">
+      {/* Form Panel */}
+      <div className="form-panel">
+        <h2>{editingItem ? 'Edit Jewelry' : 'Add Jewelry'}</h2>
+        <InventoryForm
+          addItem={addItem}
+          updateItem={updateItem}
+          editingItem={editingItem}
+        />
+      </div>
+
+      {/* Inventory Panel */}
+      <div className="inventory-panel">
+        <h2>Inventory List</h2>
+        <p>
+          <strong>Total Items:</strong> {items.length}
+        </p>
+        <InventoryList
+          items={items}
+          deleteItem={deleteItem}
+          editItem={editItem}
+        />
+      </div>
     </div>
   );
 };

@@ -1,8 +1,143 @@
+/* General Styles */
+:root {
+  --primary-color: #007bff; /* Vibrant Blue */
+  --secondary-color: #333; /* Dark Text */
+  --background-color: #f4f4f4; /* Light Gray */
+  --accent-color: #28a745; /* Green */
+  --danger-color: #dc3545; /* Red */
+  --text-color-light: white;
+}
+
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f9f9f9;
-    margin: 0;
-    padding: 0;
+  font-family: 'Roboto', sans-serif; /* Modern POS Font */
+  color: var(--secondary-color);
+  background-color: var(--background-color);
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Center-align and style headings */
+h2 {
+  text-align: center;
+  color: var(--primary-color); /* Blue */
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+/* Form Panel */
+.form-panel {
+  width: 40%;
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+form input {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid var(--secondary-color);
+  border-radius: 5px;
+}
+
+button {
+  padding: 10px 15px;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button.add {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+button.update {
+  background-color: var(--accent-color);
+  color: white;
+}
+
+button.delete {
+  background-color: var(--danger-color);
+  color: white;
+}
+
+/* Inventory List Panel */
+.inventory-panel {
+  width: 100%; /* Make the inventory panel take the full container width */
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  background-color: var(--background-color);
+  margin-bottom: 15px; /* Add spacing between items */
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between; /* Separate text and buttons */
+  align-items: center; /* Align text and buttons vertically */
+}
+
+li span {
+  font-size: 16px;
+  font-weight: bold;
+  flex: 1; /* Allow the text to take up available space */
+}
+
+li button {
+  margin-left: 10px; /* Space between buttons */
+  padding: 8px 12px;
+  font-size: 14px;
+}
+
+button.edit {
+  background-color: var(--accent-color);
+  color: var(--text-color-light);
+}
+
+button.delete {
+  background-color: var(--danger-color);
+  color: var(--text-color-light);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
   }
-  
-  
+
+  .form-panel, .inventory-panel {
+    width: 90%;
+  }
+}

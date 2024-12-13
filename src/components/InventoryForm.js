@@ -15,6 +15,7 @@ const InventoryForm = ({ addItem, updateItem, editingItem }) => {
 
     const handleSubmit = (e) => {
         e.preventDefault(); // stops page from reloading after each submisson
+        const formattedValue = Number(value);
         if (editingItem) {
             updateItem({ ...editingItem, name, type, value});
         } else {
@@ -51,7 +52,8 @@ const InventoryForm = ({ addItem, updateItem, editingItem }) => {
             onChange={(e) => setValue(e.target.value)} // on every change (onChange) thats made (e.target.value) updates the state (setValue)
             required
           />
-          <button type="submit">{editingItem ? "Update Jewelry" : "Add Jewelry"}</button>
+          <button type="submit" className={editingItem ? 'update' : 'add'}>{editingItem ? 'Update Jewelry' : 'Add Jewelry'}</button>
+
         </form>
       );
     
