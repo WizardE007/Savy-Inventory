@@ -13,6 +13,7 @@ const InventoryList = ({ items, deleteItem, editItem }) => {
         <ul>
             
             {items.map((item, index) => ( 
+                // READ
                 // we are using .map to iterate through items array
                 // intializing each item to a property using id
                 // each listed item needs its own key id 
