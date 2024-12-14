@@ -80,6 +80,79 @@ button.delete {
   background-color: var(--danger-color);
   color: white;
 }
+.search-bar input {
+  width: 97%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid var(--secondary-color);
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+/* Inventory Panel */
+.inventory-panel {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.inventory-panel h2 {
+  text-align: center;
+  color: var(--primary-color);
+}
+
+.sort-filter-controls {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.sort-filter-controls button {
+  padding: 10px 15px;
+  font-size: 14px;
+  font-weight: bold;
+  color: var(--text-color-light);
+  border: none;
+  border-radius: 5px;
+  background-color: var(--primary-color);
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.sort-filter-controls button:hover {
+  background-color: #0056b3;
+}
+
+.sort-filter-controls button:active {
+  transform: translateY(2px);
+}
+
+.sort-filter-controls button:nth-child(4), /* CSV Button */
+.sort-filter-controls button:nth-child(5) { /* JSON Button */
+  background-color: #138496; /* Teal */
+}
+
+.inventory-summary {
+  display: flex;
+  justify-content: space-between; /* Align items horizontally with space in between */
+  align-items: center; /* Align items vertically in the center */
+  margin-bottom: 20px; /* Add spacing below this section */
+  padding: 10px; /* Optional: Add padding for better spacing */
+  background-color: var(--background-color); /* Optional: Add a light background */
+  border-radius: 10px; /* Optional: Rounded corners */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: Subtle shadow for aesthetics */
+}
+
+.inventory-summary p {
+  margin: 0; /* Remove default margin from <p> tags */
+  font-size: 16px; /* Ensure consistent font size */
+  font-weight: bold; /* Emphasize the labels */
+  color: var(--secondary-color); /* Match text color with the theme */
+}
+
+
 
 /* Inventory List Panel */
 .inventory-panel {

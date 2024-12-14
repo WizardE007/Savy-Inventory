@@ -14,17 +14,16 @@ const InventoryForm = ({ addItem, updateItem, editingItem }) => {
     }, [editingItem]);
 
     const handleSubmit = (e) => {
-        e.preventDefault(); // stops page from reloading after each submisson
-        const formattedValue = Number(value);
+        e.preventDefault();
         if (editingItem) {
-            updateItem({ ...editingItem, name, type, value});
+          updateItem({ ...editingItem, name, type, value: Number(value) });
         } else {
-        addItem({ id: Date.now(), name, type, value }); // sending our data (inserted values) to the App.js
+          addItem({ id: Date.now(), name, type, value: Number(value) });
         }
-        setName(''); // clears form after submission and sets it back to placeholder value
-        setType(''); // clears form after submission and sets it back to placeholder value
-        setValue(''); // clears form after submission and sets it back to placeholder value
-    };
+        setName('');
+        setType('');
+        setValue('');
+      };
 
     return (
         // form listens for when sumbit button is clicked and runs handleSubmit function
