@@ -1,3 +1,12 @@
+To get started:
+
+1. Fork & clone repo
+2. npm install
+3. npm start
+
+To open project locally.
+
+
 Solo Project Brief
 
 
